@@ -14,3 +14,8 @@
 * 
 * 
 * 
+
+## Painel de controle
+* Ferramentas administrativas:
+    * Agendador de tarefas: Agenda tarefas que são executadas automaticamente conforme foi programado
+    * Configuração do sistema: É possível desativar a inicialização automática dos programas.
