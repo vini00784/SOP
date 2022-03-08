@@ -11,3 +11,11 @@
 ### CLI
 * Interface baseada em texto que aceita comandos digitados na tela
     * Esses comandos vão executar ações
+    * A interface baseada em comandos é muitas vezes um "herói" quando se trata de uma administração do sistema e solução de problemas
+
+### Empresas e instituições que usam LINUX
+* NASA 
+* McDonald's
+* New York Stock Exchange (NYSE)
+* DreamWorks Animation
+* Departamento de Defesa dos EUA
