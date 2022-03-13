@@ -30,4 +30,4 @@
 
 ### Argumentos
 * Um argumento pode ser usado para especificar algo para o comando agir.
-* O comando "ls" pode ser dado o nome de um diretório, ex.: ls Documents // o comando listará o conteúdo (ou lista de arquivos) do diretório Documents.
+* O comando ``` ls ``` pode ser dado o nome de um diretório, ex.: ls Documents // o comando `listará o conteúdo ` (ou lista de arquivos) do diretório Documents.
