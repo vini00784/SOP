@@ -105,3 +105,12 @@ O primeiro arquivo alternatives.log é um arquivo regular -, enquanto o segundo 
 
 Permissões: indicam como determinados usuários podem acessar um arquivo.
 * d `` rwxr-xr-x `` 2 root   root   4096 Apr 11  2014 upstart
+
+### Permissões
+As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório.
+
+Vamos usar as informações de um arquivo exemplo para mostrar as informações necessárias:
+
+    -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
+![tipos de arquivo](./linux-imgs/09.PNG)
+![tipos de arquivo](./linux-imgs/10.PNG)
