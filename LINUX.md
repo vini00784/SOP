@@ -89,7 +89,7 @@ Se você pensar no sistema de arquivos como um mapa, os caminhos são as direç�
 
 #### Listando arquivos
 Por padrão, quando o comando ls é usado sem opções ou argumentos, ele irá listar os arquivos no diretório atual.
-Para saber os detalhes sobre um arquivo, tais como, o tipo de arquivo, as permissões, propriedade ou o carimbo de data/hora, execute uma listagem longa usando a opção -l para o comando ls. Abaixo, uma listagem do diretório /var/log é usada como um exemplo, uma vez que fornece uma variedade de saídas:
+Para saber os detalhes sobre um arquivo, tais como, o tipo de arquivo, as permissões, propriedade ou o carimbo de data/hora, execute uma listagem longa usando a opção `` -l `` para o comando ls. Abaixo, uma listagem do diretório /var/log é usada como um exemplo, uma vez que fornece uma variedade de saídas:
 
 ![ls](./linux-imgs/06.PNG)
 
@@ -102,3 +102,6 @@ Na verdade, o primeiro campo contém dez caracteres, onde o primeiro caractere i
 ![tipos de arquivo](./linux-imgs/08.PNG)
 
 O primeiro arquivo alternatives.log é um arquivo regular -, enquanto o segundo arquivo apache2 é um diretório d.
+
+Permissões: indicam como determinados usuários podem acessar um arquivo
+d `` rwxr-xr-x `` 2 root   root   4096 Apr 11  2014 upstart
