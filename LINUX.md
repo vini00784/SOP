@@ -78,5 +78,5 @@ Se você pensar no sistema de arquivos como um mapa, os caminhos são as direç�
     * Caminho absoluto: um caminho absoluto permite que você especifique a localização exata de um diretório.
     * Caminho relativo: um caminho relativo fornece direções para um arquivo relativo à sua localização atual no sistema de arquivos. Os caminhos relativos não começam com o caractere "/", eles começam com o nome de um diretório. Um caminho relativo começa a partir do diretório atual. Use o caractere / para separar os nomes dos diretórios e o resultado School/Art é um caminho relativo do diretório Documents para o diretório Art:
 
-    ![sei lá](./linux-imgs/05.PNG)
+![sei lá](./linux-imgs/05.PNG)
 
