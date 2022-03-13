@@ -26,9 +26,10 @@ O nome do comando é geralmente associado ao que ele faz ou no que o desenvolved
 A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…] [argumentos…] ``, ou seja, se digita o comando e em seguida quaisquer opções e/ou argumentos antes de pressionar a tecla Enter. // Normalmente, as opções alteram o comportamento do comando e os argumentos são itens ou valores para o comando agir.
 
 ------------------------------------------------------------------------------
-* ls - exibe uma lista de arquivos contidos no diretório atual.
+* ls - exibe uma lista de arquivos contidos no diretório atual
 * aptitude - ferramenta de gerenciamento de pacotes disponível em algumas distribuições Linux (este comando aceitará `` moo `` como argumento)
 * pwd - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
+* cd - navega pela estrutura do sistema de arquivos
 
 ### Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -74,4 +75,8 @@ O argumento para o comando cd é mais do que apenas o nome de um diretório, na 
 
 ------------------------------------------------------------------------------
 Se você pensar no sistema de arquivos como um mapa, os caminhos são as direções passo a passo; eles podem ser usados para indicar a localização de qualquer arquivo dentro do sistema de arquivos. Existem dois tipos de caminhos: absoluto e relativo. Os caminhos absolutos começam na root do sistema de arquivos, os caminhos relativos começam a partir da sua localização atual.
+    * Caminho absoluto: um caminho absoluto permite que você especifique a localização exata de um diretório.
+    * Caminho relativo: um caminho relativo fornece direções para um arquivo relativo à sua localização atual no sistema de arquivos. Os caminhos relativos não começam com o caractere "/", eles começam com o nome de um diretório. Um caminho relativo começa a partir do diretório atual. Use o caractere / para separar os nomes dos diretórios e o resultado School/Art é um caminho relativo do diretório Documents para o diretório Art:
+
+    ![sei lá](./linux-imgs/05.PNG)
 
