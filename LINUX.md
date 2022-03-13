@@ -103,5 +103,5 @@ Na verdade, o primeiro campo contém dez caracteres, onde o primeiro caractere i
 
 O primeiro arquivo alternatives.log é um arquivo regular -, enquanto o segundo arquivo apache2 é um diretório d.
 
-Permissões: indicam como determinados usuários podem acessar um arquivo
+Permissões: indicam como determinados usuários podem acessar um arquivo.
 d `` rwxr-xr-x `` 2 root   root   4096 Apr 11  2014 upstart
