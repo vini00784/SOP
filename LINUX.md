@@ -49,3 +49,7 @@ Para descobrir onde você está atualmente localizado dentro do sistema de arqui
 
     pwd [OPÇÕES]
 
+A saída do comando acima indica que o usuário está atualmente em sua pasta pessoal, mostrada no sistema de arquivos abaixo:
+
+![Diretório](./linux-imgs/02.PNG)
+
