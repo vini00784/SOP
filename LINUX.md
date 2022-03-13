@@ -23,11 +23,12 @@
 
 ### Comandos LINUX
 O nome do comando é geralmente associado ao que ele faz ou no que o desenvolvedor que criou o comando acha que descreve a melhor função do comando.
-* A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…] [argumentos…] ``, ou seja, se digita o comando e em seguida quaisquer opções e/ou argumentos antes de pressionar a tecla Enter. // Normalmente, as opções alteram o comportamento do comando e os argumentos são itens ou valores para o comando agir.
-------------------------------------------------------------------------------
-* ls - Exibe uma lista de arquivos contidos no diretório atual.
+A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…] [argumentos…] ``, ou seja, se digita o comando e em seguida quaisquer opções e/ou argumentos antes de pressionar a tecla Enter. // Normalmente, as opções alteram o comportamento do comando e os argumentos são itens ou valores para o comando agir.
 
-* aptitude - ferramente de gerenciamento de pacotes disponível em algumas distribuições Linux (este comando aceitará `` moo `` como argumento)
+------------------------------------------------------------------------------
+* ls - exibe uma lista de arquivos contidos no diretório atual.
+* aptitude - ferramenta de gerenciamento de pacotes disponível em algumas distribuições Linux (este comando aceitará `` moo `` como argumento)
+* pwd - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
 
 ### Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -45,6 +46,7 @@ Muitas vezes, o caractere é escolhido para ser mnemônico para o seu propósito
 * As opções podem ser usadas de uma só vez, por exemplo `` ls -l -r `` ou `` ls -rl `` ou `` ls -lr ``. Todas as opções vão gerar o mesmo resultado.
 
 ### Diretórios
+Os arquivos são usados para armazenar dados tais como texto, gráficos e programas. Os diretórios são um tipo de arquivo usado para armazenar outros arquivos.
 Para descobrir onde você está atualmente localizado dentro do sistema de arquivos, o comando pwd pode ser usado. O comando pwd imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos:
 
     pwd [OPÇÕES]
@@ -52,4 +54,17 @@ Para descobrir onde você está atualmente localizado dentro do sistema de arqui
 A saída do comando acima indica que o usuário está atualmente em sua pasta pessoal, mostrada no sistema de arquivos abaixo:
 
 ![Diretório](./linux-imgs/02.PNG)
+
+#### Alterando diretórios
+Os diretórios são um tipo de arquivo usado para armazenar outros arquivos, eles fornecem uma estrutura organizacional hierárquica, como na imagem abaixo:
+
+![Hierarquia](./linux-imgs/03.PNG)
+
+Para navegar pela estrutura do sistema de arquivos, use o comando `` cd `` (change directory) para alterar diretórios.
+
+    cd [opções] [caminho]
+
+Se você olhar novamente para o gráfico acima, você verá que o diretório Documents está localizado dentro do diretório home, onde você se encontra atualmente. Para mover para o diretório Documents, use-o como argumento para o comando `` cd ``:
+
+![cd](./linux-imgs/04.PNG)
 
