@@ -139,3 +139,5 @@ Execute o comando `` sl `` como usuário root colocando `` sudo `` na frente del
 ![sudo](./linux-imgs/12.PNG)
 
 Uma vez concluído o comando, observe que o prompt `` não foi alterado ``, você ainda está conectado como sysadmin. O comando sudo fornece `` apenas acesso administrativo para a execução do comando especificado ``. Esta é uma vantagem, pois reduz o risco de um usuário executar acidentalmente um comando como root. A intenção de executar um comando é clara; o comando é executado como root se prefixado com o comando sudo. Caso contrário, o comando é executado como um usuário regular.
+
+Próximo capítulo: 7
