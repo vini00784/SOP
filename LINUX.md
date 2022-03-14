@@ -103,14 +103,20 @@ Na verdade, o primeiro campo contém dez caracteres, onde o primeiro caractere i
 
 O primeiro arquivo alternatives.log é um arquivo regular -, enquanto o segundo arquivo apache2 é um diretório d.
 
-Permissões: indicam como determinados usuários podem acessar um arquivo.
-* d `` rwxr-xr-x `` 2 root   root   4096 Apr 11  2014 upstart
-
 ### Permissões
 As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório.
 
 Vamos usar as informações de um arquivo exemplo para mostrar as informações necessárias:
 
     -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
-![tipos de arquivo](./linux-imgs/09.PNG)
-![tipos de arquivo](./linux-imgs/10.PNG)
+![permissões](./linux-imgs/09.PNG)
+![permissões](./linux-imgs/10.PNG)
+
+### Acesso Administrativo
+Existem muitos comandos Linux que lidam com informações confidenciais, como senhas, hardware do sistema, ou de outra forma operam sob outras circunstâncias excepcionais. Impedir que usuários regulares executem esses comandos ajuda a proteger o sistema. Fazer login como usuário root fornece acesso administrativo, permitindo a execução de alguns dos comandos privilegiados. Para sair e retornar à conta, use o comando `` exit ``.
+
+#### O Comando `` su ``
+
+`` su [opções] [nome-do-usuário] ``
+
+O comando `` su `` permite que você atue temporariamente como um usuário diferente. Ele faz isso criando um novo shell. O shell é simplesmente um console de entrada de texto que permite digitar comandos. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos.
