@@ -131,5 +131,11 @@ Depois de executar o comando su, uma senha é necessária. Como medida de segura
 `` sudo [opções] [comando] ``
 
 O comando `` sudo `` permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos. Para especificar uma conta de usuário diferente, use a opção `` -u ``.
-Assim como o comando su, o sudo também pede senha para entrar no usuário.
-Execute o comando sl como usuário root colocando sudo na frente dele.
+
+Assim como o comando `` su ``, o `` sudo `` também pede senha para entrar no usuário.
+
+Execute o comando `` sl `` como usuário root colocando `` sudo `` na frente dele.
+
+![sudo](./linux-imgs/12.PNG)
+
+Uma vez concluído o comando, observe que o prompt `` não foi alterado ``, você ainda está conectado como sysadmin. O comando sudo fornece `` apenas acesso administrativo para a execução do comando especificado ``. Esta é uma vantagem, pois reduz o risco de um usuário executar acidentalmente um comando como root. A intenção de executar um comando é clara; o comando é executado como root se prefixado com o comando sudo. Caso contrário, o comando é executado como um usuário regular.
