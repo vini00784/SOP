@@ -30,6 +30,7 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * aptitude - ferramenta de gerenciamento de pacotes disponível em algumas distribuições Linux (este comando aceitará `` moo `` como argumento)
 * pwd - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
 * cd - navega pela estrutura do sistema de arquivos
+* su - permite que você atue temporariamente como um usuário diferente. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos
 
 ### Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -120,3 +121,15 @@ Existem muitos comandos Linux que lidam com informações confidenciais, como se
 `` su [opções] [nome-do-usuário] ``
 
 O comando `` su `` permite que você atue temporariamente como um usuário diferente. Ele faz isso criando um novo shell. O shell é simplesmente um console de entrada de texto que permite digitar comandos. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos. Para sair e retornar à conta, use o comando `` exit ``.
+
+Depois de executar o comando su, uma senha é necessária. Como medida de segurança, a senha não estará visível à medida que for digitada.
+
+![painel-su](./linux-imgs/11.PNG)
+
+#### O Comando `` sudo ``
+
+`` sudo [opções] [comando] ``
+
+O comando `` sudo `` permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos. Para especificar uma conta de usuário diferente, use a opção `` -u ``.
+Assim como o comando su, o sudo também pede senha para entrar no usuário.
+Execute o comando sl como usuário root colocando sudo na frente dele.
