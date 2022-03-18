@@ -14,6 +14,7 @@
 * 
 * 
 * 
+* net user - gerencia os usuários da máquina
 
 ## Painel de controle
 * Ferramentas administrativas:

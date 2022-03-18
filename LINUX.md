@@ -104,14 +104,6 @@ Na verdade, o primeiro campo contém dez caracteres, onde o primeiro caractere i
 
 O primeiro arquivo alternatives.log é um arquivo regular -, enquanto o segundo arquivo apache2 é um diretório d.
 
-### Permissões
-As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório.
-
-Vamos usar as informações de um arquivo exemplo para mostrar as informações necessárias:
-
-    -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
-![permissões](./linux-imgs/09.PNG)
-![permissões](./linux-imgs/10.PNG)
 
 ### Acesso Administrativo
 Existem muitos comandos Linux que lidam com informações confidenciais, como senhas, hardware do sistema, ou de outra forma operam sob outras circunstâncias excepcionais. Impedir que usuários regulares executem esses comandos ajuda a proteger o sistema. Fazer login como usuário root fornece acesso administrativo, permitindo a execução de alguns dos comandos privilegiados. 
@@ -140,4 +132,11 @@ Execute o comando `` sl `` como usuário root colocando `` sudo `` na frente del
 
 Uma vez concluído o comando, observe que o prompt `` não foi alterado ``, você ainda está conectado como sysadmin. O comando sudo fornece `` apenas acesso administrativo para a execução do comando especificado ``. Esta é uma vantagem, pois reduz o risco de um usuário executar acidentalmente um comando como root. A intenção de executar um comando é clara; o comando é executado como root se prefixado com o comando sudo. Caso contrário, o comando é executado como um usuário regular.
 
-Próximo capítulo: 7
+### Permissões
+As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório.
+
+Vamos usar as informações de um arquivo exemplo para mostrar as informações necessárias:
+
+    -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
+![permissões](./linux-imgs/09.PNG)
+![permissões](./linux-imgs/10.PNG)
