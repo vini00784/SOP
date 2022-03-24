@@ -162,4 +162,4 @@ No caso abaixo, o usuário `` sysadmin `` acaba tendo menos acesso a esse arquiv
 #### Alterando permissões de arquivo
 O comando `` chmod `` é usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
 
-<strong OBS.:strong> O comando é chamado de chmod e não de chperm pois as permissões costumavam ser feredidas como modos de acesso, então o comando chmod realmente significa alterar os modos de acesso.
+<strong>OBS.:</strong> O comando é chamado de chmod e não de chperm pois as permissões costumavam ser feredidas como modos de acesso, então o comando chmod realmente significa alterar os modos de acesso.
