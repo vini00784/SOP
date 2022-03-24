@@ -26,11 +26,12 @@ O nome do comando é geralmente associado ao que ele faz ou no que o desenvolved
 A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…] [argumentos…] ``, ou seja, se digita o comando e em seguida quaisquer opções e/ou argumentos antes de pressionar a tecla Enter. // Normalmente, as opções alteram o comportamento do comando e os argumentos são itens ou valores para o comando agir.
 
 ------------------------------------------------------------------------------
-* ls - exibe uma lista de arquivos contidos no diretório atual
+* `` ls `` - exibe uma lista de arquivos contidos no diretório atual
 * aptitude - ferramenta de gerenciamento de pacotes disponível em algumas distribuições Linux (este comando aceitará `` moo `` como argumento)
-* pwd - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
-* cd - navega pela estrutura do sistema de arquivos
-* su - permite que você atue temporariamente como um usuário diferente. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos
+* `` pwd `` - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
+* `` cd `` - navega pela estrutura do sistema de arquivos
+* `` su `` - permite que você atue temporariamente como um usuário diferente. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos
+* `` sudo `` - O comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos.
 
 ### Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -133,10 +134,32 @@ Execute o comando `` sl `` como usuário root colocando `` sudo `` na frente del
 Uma vez concluído o comando, observe que o prompt `` não foi alterado ``, você ainda está conectado como sysadmin. O comando sudo fornece `` apenas acesso administrativo para a execução do comando especificado ``. Esta é uma vantagem, pois reduz o risco de um usuário executar acidentalmente um comando como root. A intenção de executar um comando é clara; o comando é executado como root se prefixado com o comando sudo. Caso contrário, o comando é executado como um usuário regular.
 
 ### Permissões
-As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório.
+As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório. Ao listar um arquivo com o comando `` ls -l ``, a saída inclui informações de permissão
 
 Vamos usar as informações de um arquivo exemplo para mostrar as informações necessárias:
 
     -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
 ![permissões](./linux-imgs/09.PNG)
 ![permissões](./linux-imgs/10.PNG)
+
+#### Tipos de permissão
+Permissão `` ler (r)``
+    * Arquivo: permite que o conteúdo do arquivo seja lido ou copiado
+    * Diretório: Sem permissão de execução no diretório, permite uma lista não detalhada de arquivos. Com permissão de execução, `` ls -l`` pode fornecer uma lista detalhada
+
+Permissão `` escrever (w) ``
+    * Arquivo: Permite que o conteúdo seja modificado ou substituído. Permite que arquivos sejam adicionados ou removidos de um diretório.
+    * Diretório: Para que essa permissão funcione, o diretório também deve ter permissão de execução.
+
+Permissão `` executar (x) ``
+    * Arquivo: Permite que um arquivo seja executado como um processo, embora os arquivos de script exijam permissões de leitura, também.
+    * Diretório: Permite que um usuário mude para o diretório se os diretórios pai também tiverem permissões de execução
+
+No caso abaixo, o usuário `` sysadmin `` acaba tendo menos acesso a esse arquivo do que os membros de grupo de staff ou todos os outros. O usuário sysadmin só tem permissões de r--. Não importa se sysadmin é um membro do grupo de staff; uma vez estabelecida a propriedade do usuário, somente as permissões do proprietário do usuário serão aplicadas.
+
+    -rw-rwx. 1 sysadmin staff 999 abr 10 2013 /home/sysadmin/test
+
+#### Alterando permissões de arquivo
+O comando `` chmod `` é usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
+
+<strong OBS.:strong> O comando é chamado de chmod e não de chperm pois as permissões costumavam ser feredidas como modos de acesso, então o comando chmod realmente significa alterar os modos de acesso.
