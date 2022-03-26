@@ -31,7 +31,9 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` pwd `` - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
 * `` cd `` - navega pela estrutura do sistema de arquivos
 * `` su `` - permite que você atue temporariamente como um usuário diferente. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos
-* `` sudo `` - O comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos.
+* `` sudo `` - o comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos.
+* `` chmod `` - usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou o usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
+* `` chown `` - usado para alterar a propriedade de arquivos e diretórios.
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -189,3 +191,14 @@ Como o sistema está atualmente conectado como o usuário sysadmin, e sysadmin �
 ![sla](./linux-imgs/16.PNG)
 
 ## Alterando a propriedade do arquivo
+Inicialmente, o proprietário de um arquivo é o usuário que o cria. O comando `` chown `` é usado para alterar a propriedade de arquivos e diretórios. Alterar o proprietário do usuário requer acesso administrativo. Um usuário regular não pode usar esse comando para alterar o proprietário do usuário de um arquivo, mesmo para dar a propriedade de um de seus próprios arquivos a outro usuário. No entanto, o comando chown também permite alterar a propriedade do grupo, o que pode ser feito pela root ou o proprietário do arquivo.
+
+Para alterar o proprietário do usuário de um arquivo, a seguinte sintaxe pode ser usada. O primeiro argumento, [proprietário], especifica qual usuário deve ser o novo proprietário. O segundo argumento, ARQUIVO, especifica qual propriedade do arquivo está mudando.
+
+    chown [opções] [proprietário] arquivo
+
+Para alternar o proprietário do script hello.sh para o usuário root, use root como o primeiro argumento e hello.sh como o segundo argumento. Não se esqueça de usar o comando sudo para obter os privilégios administrativos necessários. Use a senha netlab123 quando solicitado:
+
+![comando chown na prática](./linux-imgs/17.PNG)
+
+OBS.: Não se esquecer de usar o comando ``           sudo            `` para obter os privilégios de administrador, se não você não conseguirá alterar a propriedade de um arquivo ou diretório.
