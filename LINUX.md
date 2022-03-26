@@ -187,3 +187,5 @@ Como o sistema está atualmente conectado como o usuário sysadmin, e sysadmin �
     chmod u+x hello.sh
 
 ![sla](./linux-imgs/16.PNG)
+
+####
