@@ -34,6 +34,7 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` sudo `` - o comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos.
 * `` chmod `` - usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou o usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
 * `` chown `` - usado para alterar a propriedade de arquivos e diretórios.
+* `` cat `` - usado para visualizar rapidamente o conteúdo de pequenos arquivos
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -201,4 +202,7 @@ Para alternar o proprietário do script hello.sh para o usuário root, use root 
 
 ![comando chown na prática](./linux-imgs/17.PNG)
 
-OBS.: Não se esquecer de usar o comando ``           sudo            `` para obter os privilégios de administrador, se não você não conseguirá alterar a propriedade de um arquivo ou diretório.
+OBS.: Não se esquecer de usar o comando `` sudo `` para obter os privilégios de administrador, se não você não conseguirá alterar a propriedade de um arquivo ou diretório.
+
+## Exibindo arquivos
+Existem alguns comandos Linux disponíveis para visualizar o conteúdo dos arquivos. O comando `` cat ``, que significa 'concatenate', é frequentemente usado para visualizar rapidamente o conteúdo de pequenos arquivos.
