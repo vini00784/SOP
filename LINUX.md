@@ -4,24 +4,24 @@
 * O que é o Linux?
     * Linux é um software de sistema operacional que é executado em um sistema de computador de hardware.
 
-### GUI (Interface gráfica do usuário)
+## GUI (Interface gráfica do usuário)
 * Por trás dessa interface. está um código que um programador desenvolveu.
 * Além de usar a GUI, os desktops Linux também utilizam outra interface mais eficiente, a interface de linha de comando (CLI).
 
-### CLI
+## CLI
 * Interface baseada em texto que aceita comandos digitados na tela
     * O que é um comando? Um comando é um programa de software que, quando executado na CLI (interface de linha de comando), executa uma ação no computador.
     * A interface baseada em comandos é muitas vezes um "herói" quando se trata de uma administração do sistema e solução de problemas
     * Ferramenta poderosa que frequentemente é o principal método usado para dispositivos de consumo de energia, servidores de computação em nuvem extremamente pequenas e capazes de tudo o que há entre eles
 
-### Empresas e instituições que usam LINUX
+## Empresas e instituições que usam LINUX
 * NASA 
 * McDonald's
 * New York Stock Exchange (NYSE)
 * DreamWorks Animation
 * Departamento de Defesa dos EUA
 
-### Comandos LINUX
+## Comandos LINUX
 O nome do comando é geralmente associado ao que ele faz ou no que o desenvolvedor que criou o comando acha que descreve a melhor função do comando.
 A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…] [argumentos…] ``, ou seja, se digita o comando e em seguida quaisquer opções e/ou argumentos antes de pressionar a tecla Enter. // Normalmente, as opções alteram o comportamento do comando e os argumentos são itens ou valores para o comando agir.
 
@@ -33,11 +33,11 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` su `` - permite que você atue temporariamente como um usuário diferente. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos
 * `` sudo `` - O comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos.
 
-### Argumentos
+## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
 * O comando ``` ls ``` pode ser dado o nome de um diretório, ex.: ls Documents // o comando ` listará o conteúdo ` (ou lista de arquivos) do diretório Documents.
 
-### Opções
+## Opções
 Usadas para alterar o comportamento de um comando. Anteriormente, o comando ls foi usado para listar o conteúdo de um diretório.
 No exemplo a seguir, a opção `` -l `` é fornecida ao comando ls, o que resulta em uma `` saída de “exibição longa” ``, o que significa que a saída fornece `` mais informações sobre cada um dos arquivos `` listados:
 
@@ -48,7 +48,7 @@ No exemplo a seguir, a opção `` -l `` é fornecida ao comando ls, o que result
 Muitas vezes, o caractere é escolhido para ser mnemônico para o seu propósito, como escolher a letra `` l para longo `` ou `` r para reverso ``. Por padrão, o comando ls imprime os resultados em ordem alfabética, portanto, adicionar a opção -r irá imprimir os resultados em ordem alfabética inversa.
 * As opções podem ser usadas de uma só vez, por exemplo `` ls -l -r `` ou `` ls -rl `` ou `` ls -lr ``. Todas as opções vão gerar o mesmo resultado.
 
-### Diretórios
+## Diretórios
 Os arquivos são usados para armazenar dados tais como texto, gráficos e programas. Os diretórios são um tipo de arquivo usado para armazenar outros arquivos.
 Para descobrir onde você está atualmente localizado dentro do sistema de arquivos, o comando pwd pode ser usado. O comando pwd imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos:
 
@@ -58,7 +58,7 @@ A saída do comando acima indica que o usuário está atualmente em sua pasta pe
 
 ![Diretório](./linux-imgs/02.PNG)
 
-#### Alterando diretórios
+### Alterando diretórios
 Os diretórios são um tipo de arquivo usado para armazenar outros arquivos, eles fornecem uma estrutura organizacional hierárquica, como na imagem abaixo:
 
 ![Hierarquia](./linux-imgs/03.PNG)
@@ -84,12 +84,12 @@ Se você pensar no sistema de arquivos como um mapa, os caminhos são as direç�
 ![sei lá](./linux-imgs/05.PNG)
 
 ------------------------------------------------------------------------------
-#### Atalhos
+### Atalhos
 * Os caracteres `` ".." ``: Independentemente do diretório em que você esteja, os caracteres ".." sempre representa um diretório maior em relação ao diretório atual, às vezes referido como o diretório pai. Mais resumidamente, os caracteres ".." são usados para voltar um diretório.
 * O caractere `` "." ``: Independentemente do diretório em que você esteja, o caractere . sempre representa seu diretório atual. Para o cd este atalho não é muito útil, mas será útil para comandos cobertos nas seções subsequentes.
 * O caractere `` "~" ``: Usado para retornar ao seu diretório home a qualquer momento, execute o seguinte comando: cd ~.
 
-#### Listando arquivos
+### Listando arquivos
 Por padrão, quando o comando ls é usado sem opções ou argumentos, ele irá listar os arquivos no diretório atual.
 Para saber os detalhes sobre um arquivo, tais como, o tipo de arquivo, as permissões, propriedade ou o carimbo de data/hora, execute uma listagem longa usando a opção `` -l `` para o comando ls. Abaixo, uma listagem do diretório /var/log é usada como um exemplo, uma vez que fornece uma variedade de saídas:
 
@@ -106,10 +106,10 @@ Na verdade, o primeiro campo contém dez caracteres, onde o primeiro caractere i
 O primeiro arquivo alternatives.log é um arquivo regular -, enquanto o segundo arquivo apache2 é um diretório d.
 
 
-### Acesso Administrativo
+## Acesso Administrativo
 Existem muitos comandos Linux que lidam com informações confidenciais, como senhas, hardware do sistema, ou de outra forma operam sob outras circunstâncias excepcionais. Impedir que usuários regulares executem esses comandos ajuda a proteger o sistema. Fazer login como usuário root fornece acesso administrativo, permitindo a execução de alguns dos comandos privilegiados. 
 
-#### O Comando `` su ``
+### O Comando `` su ``
 
 `` su [opções] [nome-do-usuário] ``
 
@@ -119,7 +119,7 @@ Depois de executar o comando su, uma senha é necessária. Como medida de segura
 
 ![painel-su](./linux-imgs/11.PNG)
 
-#### O Comando `` sudo ``
+### O Comando `` sudo ``
 
 `` sudo [opções] [comando] ``
 
@@ -133,7 +133,7 @@ Execute o comando `` sl `` como usuário root colocando `` sudo `` na frente del
 
 Uma vez concluído o comando, observe que o prompt `` não foi alterado ``, você ainda está conectado como sysadmin. O comando sudo fornece `` apenas acesso administrativo para a execução do comando especificado ``. Esta é uma vantagem, pois reduz o risco de um usuário executar acidentalmente um comando como root. A intenção de executar um comando é clara; o comando é executado como root se prefixado com o comando sudo. Caso contrário, o comando é executado como um usuário regular.
 
-### Permissões
+## Permissões
 As permissões determinam as maneiras pelas quais diferentes usuários podem interagir com um arquivo ou diretório. Ao listar um arquivo com o comando `` ls -l ``, a saída inclui informações de permissão
 
 Vamos usar as informações de um arquivo exemplo para mostrar as informações necessárias:
@@ -142,7 +142,7 @@ Vamos usar as informações de um arquivo exemplo para mostrar as informações 
 ![permissões](./linux-imgs/09.PNG)
 ![permissões](./linux-imgs/10.PNG)
 
-#### Tipos de permissão
+### Tipos de permissão
 Permissão `` ler (r)``
     * Arquivo: permite que o conteúdo do arquivo seja lido ou copiado
     * Diretório: Sem permissão de execução no diretório, permite uma lista não detalhada de arquivos. Com permissão de execução, `` ls -l`` pode fornecer uma lista detalhada
@@ -159,7 +159,7 @@ No caso abaixo, o usuário `` sysadmin `` acaba tendo menos acesso a esse arquiv
 
     -rw-rwx. 1 sysadmin staff 999 abr 10 2013 /home/sysadmin/test
 
-#### Alterando permissões de arquivo
+### Alterando permissões de arquivo
 O comando `` chmod `` é usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
 
 <strong>OBS.:</strong> O comando é chamado de chmod e não de chperm pois as permissões costumavam ser referidas como modos de acesso, então o comando chmod realmente significa alterar os modos de acesso.
@@ -188,4 +188,4 @@ Como o sistema está atualmente conectado como o usuário sysadmin, e sysadmin �
 
 ![sla](./linux-imgs/16.PNG)
 
-### Alterando a propriedade do arquivo
+## Alterando a propriedade do arquivo
