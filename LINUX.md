@@ -171,3 +171,19 @@ Existem duas técnicas para permissões com o comando `` chmod ``: simbólico e 
 Para usar o método simbólico de chmod indicar primeiro qual conjunto de permissões está sendo alterado:
 
 ![permissões](./linux-imgs/13.PNG)
+
+Depois, especifique um símbolo de ação:
+
+![permissões](./linux-imgs/14.PNG)
+
+Após um símbolo de ação, especifique uma ou mais permissões a serem executadas:
+
+![permissões](./linux-imgs/15.PNG)
+
+Finalmente, um espaço e os nomes de caminho para os arquivos atribuírem essas permissões.   
+
+Como o sistema está atualmente conectado como o usuário sysadmin, e sysadmin é o proprietário deste arquivo, dando ao proprietário do usuário a permissão de execução deve permitir que você execute este script. Usando o comando chmod com o caractere `` u `` para representar o conjunto de permissões do proprietário do usuário, o caractere `` + `` para indicar uma permissão está sendo adicionado e o caractere `` x `` para representar a permissão de execução, o comando deve ser executado da seguinte forma:
+
+    chmod u+x hello.sh
+
+![sla](./linux-imgs/16.PNG)
