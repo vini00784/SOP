@@ -162,4 +162,12 @@ No caso abaixo, o usuário `` sysadmin `` acaba tendo menos acesso a esse arquiv
 #### Alterando permissões de arquivo
 O comando `` chmod `` é usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
 
-<strong>OBS.:</strong> O comando é chamado de chmod e não de chperm pois as permissões costumavam ser feredidas como modos de acesso, então o comando chmod realmente significa alterar os modos de acesso.
+<strong>OBS.:</strong> O comando é chamado de chmod e não de chperm pois as permissões costumavam ser referidas como modos de acesso, então o comando chmod realmente significa alterar os modos de acesso.
+
+Existem duas técnicas para permissões com o comando `` chmod ``: simbólico e octal . O <strong>método simbólico</strong> é bom para alterar um conjunto de permissões de cada vez. O <strong>método octal</strong> especificado ou numérico, requer o conhecimento do valor octal de cada uma das permissões e que todos os três conjuntos de permissões (outros) são necessários a cada vez.
+
+    chmod [<conjunto><ação><permissões>]... arquivo
+
+Para usar o método simbólico de chmod indicar primeiro qual conjunto de permissões está sendo alterado:
+
+![permissões](./linux-imgs/13.PNG)
