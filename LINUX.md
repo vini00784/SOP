@@ -436,3 +436,14 @@ O comando `` ps `` exibirá os processos que estão sendo executados no terminal
 * TTY: O nome do terminal em que o processo está sendo executado. Esta informação é útil para distinguir entre diferentes processos que têm o mesmo nome.
 * TIME: A quantidade total de tempo do processador usado pelo processo. Normalmente, essas informações não são usadas por usuários comuns.
 * CMD: O comando que iniciou o processo.
+
+A opção `` -e `` exibirá todos os processos, ao invés de visualizar apenas os processos em execução no terminal atual.
+
+Normalmente, a opção `` -f `` (`` -ef ``) também é usada, pois fornece mais detalhes na saída do comando, incluindo opções e argumentos.
+
+## Gerenciamento de pacotes 
+O gerenciamento de pacotes é um sistema pelo qual o software pode ser instalado, atualizado, consultado ou removido de um sistema de arquivos.
+
+No nível mais baixo do sistema de gerenciamento de pacotes Debian está o comando `` dpkg ``. Este comando pode ser complicado para usuários iniciantes do Linux, então a Advanced Package Tool, `` apt-get ``, um programa front-end para a ferramenta `` dpkg ``, torna o gerenciamento de pacotes ainda mais fácil.
+
+Muitos dos comandos de gerenciamento de pacotes exigem acesso administrativo, portanto, eles serão prefaciados com o comando `` sudo ``.
