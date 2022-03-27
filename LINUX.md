@@ -540,3 +540,45 @@ Para começar a usar `` vi ``, basta digitar o comando seguido do nome do caminh
 Existem três modos usados no vi: modo de comando, modo de inserção e modo ex.
 
 ### Movimento do modo de comando
+Inicialmente, o programa é iniciado no modo de comando. Modo de comando é usado para digitar comandos, como aqueles usados para se mover em torno de um documento, manipular texto e acessar os outros dois modos. Para retornar ao modo de comando a qualquer momento, pressione a tecla Esc.
+
+Uma vez que algum texto foi adicionado a um documento, para executar ações como mover o cursor, a tecla Esc precisa ser pressionada primeiro para retornar ao modo de comando. Isso parece muito trabalho, mas lembre-se que vi funciona em um ambiente terminal onde um mouse é inútil.
+
+Comandos de movimento em vi têm dois aspectos, um movimento e um prefixo numérico opcional, que indica quantas vezes repetir esse movimento. O formato geral é o seguinte:
+
+    [contagem] movimento
+
+A tabela a seguir resume as teclas de movimento disponíveis:
+
+![lista com teclas de movimento disponíveis](./linux-imgs/33.PNG)
+
+Esses movimentos podem ser prefixados com um número para indicar quantas vezes o movimento deve ser realizado. Por exemplo, `` 5h `` moverá o cursor cinco caracteres para a esquerda e `` 3w `` moverá o cursor três palavras para a direita.
+
+Para mover o cursor para um número de linha específico, digite esse número de linha seguido do caractere `` G ``. Por exemplo, para chegar à quinta linha do arquivo tipo `` 5G. 1G ou gg `` pode ser usado para ir para a primeira linha do arquivo, enquanto um `` G `` solitário irá levá-lo para a última linha. Para descobrir em que linha o cursor está atualmente, use `` CTRL-G ``.
+
+### Ações do modo de comando
+A convenção padrão para edição de conteúdo com processadores de texto é usar copiar, cortar e colar. O programa vi não tem nenhum destes. Em vez disso, vi usa os três comandos a seguir:
+
+![comandos vi](./linux-imgs/34.PNG)
+
+Os movimentos aprendidos na página anterior são usados para especificar onde a ação deve ocorrer, sempre começando com a localização atual do cursor. Qualquer um dos seguintes formatos gerais para comandos de ação é aceitável:
+
+    açao [contagem] movimento
+    [contagem] movimento ação
+
+### Excluir
+Excluir remove o texto indicado da página e o guarda no buffer, sendo o buffer o equivalente à “área de transferência” usada no Windows ou Mac OSX. A tabela a seguir fornece alguns exemplos de uso comuns:
+
+![comandos excluir](./linux-imgs/35.PNG)
+
+### Mudar
+Mudança é muito semelhante a excluir; o texto é removido e guardado no buffer, no entanto, o programa é alternado para o modo de inserção para permitir alterações imediatas no texto. A tabela a seguir fornece alguns exemplos de uso comuns:
+
+![comandos mudar](./linux-imgs/36.PNG)
+
+### Arrancar (yank)
+Yank coloca conteúdo no buffer sem excluí-lo. A tabela a seguir fornece alguns exemplos de uso comuns:
+
+![comandos arrancar](./linux-imgs/37.PNG)
+
+### Colocar
