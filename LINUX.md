@@ -300,3 +300,8 @@ O comando `` grep `` é um filtro de texto que irá procurar linhas de entrada e
 
     grep [opções] padrão [arquivo]
 
+Por exemplo, o arquivo passwd que copiamos anteriormente para o diretório Documents contém os detalhes de contas especiais do sistema e contas de usuário no sistema. Este arquivo pode ser muito grande, no entanto, o comando `` grep `` pode ser usado filtrar informações sobre um usuário específico, como o usuário sysadmin. Use sysadmin como argumento de padrão e passwd como argumento de arquivo:
+
+![comando grep na prática](./linux-imgs/20.PNG)
+
+O comando acima retornou a linha do passwd que contém o sysadmin padrão.
