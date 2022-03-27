@@ -249,3 +249,12 @@ Criar cópias de arquivos pode ser útil por vários motivos:
 
 ---
 
+O comando `` dd `` é um utilitário para copiar arquivos ou partições inteiras no nível de bits.
+    
+    dd [opções] operando
+
+Este comando tem vários recursos úteis, inclusive:
+    * Pode ser usado para clonar ou excluir (limpar) discos ou partições inteiros.
+    * Pode ser usado para copiar dados brutos para dispositivos removíveis, como unidades USB e CDROMs.
+    * Pode fazer backup e restaurar o MBR (Master Boot Record).
+    * Pode ser usado para criar um arquivo de tamanho específico preenchido com zeros binários, que pode ser usado como um arquivo de swap (memória virtual).
