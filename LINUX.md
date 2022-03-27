@@ -527,3 +527,16 @@ Isso é útil se você precisar copiar conteúdo de um arquivo importante para o
 O uso de apenas um `` > `` sobrescreverá qualquer conteúdo anterior do arquivo, já o uso de dois `` >> ``, anexa ao invés de substituir.
 
 ## Editor de texto
+O principal editor de texto para Linux e UNIX é um programa chamado `` vi ``. Embora existam inúmeros editores disponíveis para Linux que vão desde o pequeno editor `` nano `` até o enorme editor `` emacs ``, existem várias vantagens para o editor `` vi ``:
+
+* O editor `` vi `` está disponível em todas as distribuições Linux do mundo. Isto não é verdade para qualquer outro editor.
+* O editor `` vi `` pode ser executado tanto em uma CLI (interface de linha de comando) quanto em uma GUI (interface gráfica do usuário).
+* Embora novos recursos tenham sido adicionados ao editor `` vi ``, as funções principais já existem há décadas. Isso significa que se alguém aprendeu o editor `` vi `` na década de 1970, eles poderiam usar uma versão moderna sem qualquer problema. Embora pareça trivial, pode não parecer tão trivial daqui a 20 anos.
+
+Para começar a usar `` vi ``, basta digitar o comando seguido do nome do caminho para o arquivo para editar ou criar:
+
+    vi newfile.txt
+
+Existem três modos usados no vi: modo de comando, modo de inserção e modo ex.
+
+### Movimento do modo de comando
