@@ -56,6 +56,7 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
     * `` apt-get upgrade `` - atualiza todos os pacotes e dependências 
     * `` apt-get remove `` - remove um pacote
     * `` apt-get purge `` - limpa completamente um pacote do sistema
+* `` passwd `` - usado para atualizar a senha de um usuário
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -483,3 +484,22 @@ A atualização de todos os pacotes do sistema deve ser feita em duas etapas. Pr
 O comando `` apt-get `` é capaz de remover ou limpar um pacote. A diferença entre os dois é que a limpeza apaga todos os arquivos de pacote, enquanto a remoção exclui todos os arquivos de configuração do pacote, exceto os arquivos de configuração.
 
 Um administrador pode executar o comando `` apt-get remove `` para remover um pacote ou o comando `` apt-get purge `` para limpar um pacote completamente do sistema.
+
+## Atualizando senhas de usuário
+O comando `` passwd `` é usado para atualizar a senha de um usuário. Os usuários só podem alterar suas próprias senhas, enquanto o usuário root pode atualizar a senha para qualquer usuário.
+
+    passwd [opções] [utilizador]
+
+Por exemplo, uma vez que estamos conectados como o usuário sysadmin, podemos alterar a senha dessa conta. Execute o comando `` passwd ``. Você será solicitado a inserir a senha existente uma vez e a nova senha duas vezes. Por razões de segurança, nenhuma saída é exibida enquanto a senha está sendo digitada. A saída é mostrada da seguinte forma:
+
+![comando passwd na prática](./linux-imgs/28.PNG)
+
+Se o usuário quiser exibir informações de status sobre sua senha, ele pode usar a opção `` -S ``
+
+![saída com o uso da opção -S](./linux-imgs/29.PNG)
+
+Os campos de saída são explicados abaixo:
+
+![lista explicando os campos de saída](./linux-imgs/30.PNG)
+
+O usuário root pode alterar a senha de qualquer usuário. Se o usuário root quiser alterar a senha para sysadmin, ele primeiro usaria `` su root `` e após isso executaria o seguinte comando: `` passwd sysadmin``
