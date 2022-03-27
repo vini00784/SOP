@@ -57,6 +57,9 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
     * `` apt-get remove `` - remove um pacote
     * `` apt-get purge `` - limpa completamente um pacote do sistema
 * `` passwd `` - usado para atualizar a senha de um usuário
+* `` echo `` - usado para imprimir a saída no terminal
+    * `` > `` - substitui qualquer alteração feita antes
+    * `` >> `` - anexa/adiciona ao invés de substituir
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -503,3 +506,24 @@ Os campos de saída são explicados abaixo:
 ![lista explicando os campos de saída](./linux-imgs/30.PNG)
 
 O usuário root pode alterar a senha de qualquer usuário. Se o usuário root quiser alterar a senha para sysadmin, ele primeiro usaria `` su root `` e após isso executaria o seguinte comando: `` passwd sysadmin``
+
+## Redirecionamento
+Há uma maneira no Linux de adicionar rapidamente conteúdo a um arquivo usando um recurso de linha de comando chamado de redirecionamento de entrada/saída (I/O). O redirecionamento de E/S permite que as informações na linha de comando sejam enviadas para arquivos, dispositivos e outros comandos. A entrada ou saída de um comando é redirecionada de seu destino padrão para um local diferente. O redirecionamento de E/S é como uma série de trilhos de trem, onde um switch (interruptor) pode ser habilitado para direcionar a saída de um comando em uma faixa diferente para que ele vá para outro lugar no shell. Nesta seção, estamos escrevendo em arquivos redirecionando a saída de um comando para um arquivo.
+
+O primeiro descritor de arquivo é entrada padrão (standard input), abreviado como STDIN. A entrada padrão é a informação que o comando recebe e processa quando é executado, essencialmente o que um usuário digita no teclado. O segundo descritor de arquivo é a saída padrão (standard output), abreviado como STDOUT. Saída padrão é a informação que o comando exibe, a saída do comando. O último descritor de arquivo é erro padrão (standard error), abreviado como STDERR. STDERR, são as mensagens de erro geradas por comandos que não são executados corretamente.
+
+![exemplificação dos três descritores de arquivo](./linux-imgs/31.PNG)
+
+Esta seção abordará um dos três descritores de arquivos, STDOUT, e como redirecionar STDOUT de onde você normalmente o vê, no terminal, para um arquivo no sistema de arquivos. Para usar o redirecionamento, basta usar um símbolo maior do que > junto com um nome de arquivo:
+
+    [comando] > [arquivo]
+
+Exemplo:
+
+![exemplificação do STDOUT](./linux-imgs/32.PNG)
+
+Isso é útil se você precisar copiar conteúdo de um arquivo importante para outro arquivo para editar o conteúdo sem modificar o arquivo original. No entanto, e se você quiser adicionar um comentário ou nota a um arquivo? Para fazer isso, você pode usar o comando `` echo ``. O comando `` echo `` é usado para imprimir a saída no terminal. O uso do `` echo `` é igual no Linux e no prompt do Windows, então, caso você use o comando `` echo "I like food." > newfile1.txt ``, ao ler o arquivo newfile1.txt, a saída será I like food. 
+
+O uso de apenas um `` > `` sobrescreverá qualquer conteúdo anterior do arquivo, já o uso de dois `` >> ``, anexa ao invés de substituir.
+
+## Editor de texto
