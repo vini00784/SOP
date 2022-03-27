@@ -37,6 +37,7 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` cat `` - usado para visualizar rapidamente o conteúdo de pequenos arquivos
 * `` head `` - usado para filtrar a visualização de um arquivo para a parte superior dele
 * `` tail `` - usado para filtrar a visualização de um arquivo para a parte inferior dele
+* `` cp `` - usado para copiar arquivos
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -236,3 +237,15 @@ O comando `` cp `` é usado para copiar arquivos. Ele requer pelo menos dois arg
  O segundo argumento é o caratere (.). Lembre-se da seção Alterando Diretórios que é um atalho que representa o diretório atual.
 
  O resultado da execução do comando anterior criaria uma cópia do conteúdo do arquivo /etc/passwd no diretório Documents, uma vez que esse é o nosso diretório atual.
+
+ As permissões podem ter um impacto nos comandos de gerenciamento de arquivos, como o comando `` cp ``. Para copiar um arquivo, é necessário ter permissão de execução para acessar o diretório onde o arquivo está localizado e a permissão de leitura para o arquivo que está sendo copiado. Também é necessário ter permissão de gravação e execução no diretório para o qual o arquivo está sendo copiado.
+
+ ---
+
+Criar cópias de arquivos pode ser útil por vários motivos:
+    * Se uma cópia de um arquivo for criada antes que as alterações sejam feitas, é possível voltar ao original.
+    * Uma cópia de um arquivo pode ser usada para transferir um arquivo para dispositivos de mídia removíveis.
+    * Uma cópia de um documento existente pode ser usada como modelo para um novo documento.
+
+---
+
