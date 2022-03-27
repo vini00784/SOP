@@ -233,6 +233,6 @@ O comando `` cp `` é usado para copiar arquivos. Ele requer pelo menos dois arg
 
  ![comando cp na prática](./linux-imgs/18.PNG)
 
- O segundo argumento é caratere (.). Lembre-se da seção Alterando Diretórios que é um atalho que representa o diretório atual.
- 
+ O segundo argumento é o caratere (.). Lembre-se da seção Alterando Diretórios que é um atalho que representa o diretório atual.
+
  O resultado da execução do comando anterior criaria uma cópia do conteúdo do arquivo /etc/passwd no diretório Documents, uma vez que esse é o nosso diretório atual.
