@@ -43,6 +43,11 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` rm `` - usado para excluir arquivos e diretórios
 * `` grep `` - é um filtro de texto que irá procurar linhas de entrada e retorno que contenham uma correspondência para um determinado padrão
 * `` shutdown `` - faz com que o sistema seja desligado de forma segura
+* `` date `` - usado para verificar a hora no terminal, seu padrão de saída é: `` dia_da_semana mês dia hora:minuto:segundo ano UTC ``
+* `` ifconfig `` - usado para exibir informações sobre a configuração de rede
+* `` iwconfig `` - semelhante ao comando `` ifconfig ``, mas é dedicado a interfaces de rede sem fio
+* `` ping `` - usado para verificar a conectividade entre dois computadores
+* `` ps `` - usado para listar processos
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -390,3 +395,43 @@ O comando `` shutdown `` faz com que o sistema seja desligado de forma segura. T
 Este comando requer acesso administrativo, então não se esqueça de usar o comando `` su ``
 
 Ao contrário de outros comandos usados para desligar o sistema, o comando `` shutdown `` requer um argumento de tempo especificando quando o desligamento deve começar. Os formatos deste argumento de tempo podem ser a palavra `` now `` (agora), uma hora do dia no formato `` hh:mm `` ou o número de minutos para atrasar no formato `` +minutos ``.
+
+O comando `` shutdown `` também tem um argumento de mensagem opcional, indicando uma mensagem que aparecerá nos terminais de todos os usuários. Por exemplo:
+
+    shutdown +1 "Goodbye World!"
+
+## Configuração de rede
+O comando `` ifconfig `` significa “configuração de interface” e é usado para exibir informações sobre a configuração de rede.
+
+    ifconfig [opções]
+
+O comando `` ifconfig `` também pode ser usado para modificar temporariamente as configurações de rede. Normalmente, essas alterações devem ser permanentes, portanto, usar o comando `` ifconfig `` para fazer essas alterações é bastante raro.
+
+O comando `` ping `` é usado para verificar a conectividade entre dois computadores. Ele faz isso enviando pacotes para outra máquina em uma rede. Se o remetente receber uma resposta, deverá ser possível conectar-se a essa máquina.
+
+As informações são enviadas usando 'pacotes'; a unidade encapsulada de dados enviados através de uma rede. Para que os pacotes encontrem o outro computador, eles precisarão de um endereço. O comando `` ping `` usa endereços IP para identificar um computador na rede ao qual ele deseja se conectar.
+
+Por padrão, o comando `` ping `` continuará enviando pacotes até que o comando break (CTL-C) seja inserido no console. Para limitar quantos pings são enviados, use a opção `` -c `` seguida do número de pings a serem enviados. O exemplo abaixo mostra ping sendo limitado a 4 iterações com -c 4.
+
+Se o comando ping for bem-sucedido, você verá uma saída como a seguinte:
+
+![comando ping na prática](./linux-imgs/26.PNG)
+
+Se o comando ping falhar, você receberá uma mensagem informando: Destination Host Unreachable (Host de destino inacessível)
+
+O comando `` ping `` pode falhar mesmo que a máquina remota esteja se conectando. Isso ocorre porque alguns administradores configuram suas máquinas, ou mesmo redes inteiras, para não responder a solicitações de ping como medida de segurança. O comando `` ping `` também funciona com um nome de host ou nome de domínio, como yahoo.com. Usando este primeiro, se o comando ping for bem sucedido, haverá uma resolução apropriada do nome e o endereço IP também estará funcionando corretamente.
+
+## Exibindo processos
+A execução de um comando resulta em algo chamado processo. No sistema operacional Linux, os processos são executados com os privilégios do usuário que executa o comando. Isso permite que os processos sejam limitados a determinados recursos com base na identidade do usuário.
+
+O comando `` ps `` pode ser usado para listar processos.
+
+    ps [opções]
+
+![comando ps na prática](./linux-imgs/27.PNG)
+
+O comando `` ps `` exibirá os processos que estão sendo executados no terminal atual por padrão. No exemplo acima, a linha inferior é o processo criado pela execução do comando ps. A saída inclui as seguintes colunas de informações:
+    * PID: O identificador do processo, que é exclusivo para o processo. Esta informação é útil para controlar o processo pelo seu número de identificação.
+    * TTY: O nome do terminal em que o processo está sendo executado. Esta informação é útil para distinguir entre diferentes processos que têm o mesmo nome.
+    * TIME: A quantidade total de tempo do processador usado pelo processo. Normalmente, essas informações não são usadas por usuários comuns.
+    * CMD: O comando que iniciou o processo.
