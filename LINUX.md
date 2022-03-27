@@ -54,6 +54,8 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
     * `` apt-get install `` - usado para instalar o pacote desejado
     * `` apt-get update `` - atualiza o cache de todos os pacotes disponíveis
     * `` apt-get upgrade `` - atualiza todos os pacotes e dependências 
+    * `` apt-get remove `` - remove um pacote
+    * `` apt-get purge `` - limpa completamente um pacote do sistema
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -475,5 +477,9 @@ O comando apt-get install também pode atualizar um pacote, se esse pacote estiv
 A atualização de todos os pacotes do sistema deve ser feita em duas etapas. Primeiro, atualize o cache de todos os pacotes disponíveis com o `` apt-get update ``. Em segundo lugar, execute o comando `` apt-get upgrade `` e todos os pacotes e dependências serão atualizados.
 
     apt-get update
-    
     apt-get upgrade
+
+### Removendo Pacotes
+O comando `` apt-get `` é capaz de remover ou limpar um pacote. A diferença entre os dois é que a limpeza apaga todos os arquivos de pacote, enquanto a remoção exclui todos os arquivos de configuração do pacote, exceto os arquivos de configuração.
+
+Um administrador pode executar o comando `` apt-get remove `` para remover um pacote ou o comando `` apt-get purge `` para limpar um pacote completamente do sistema.
