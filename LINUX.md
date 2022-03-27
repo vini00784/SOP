@@ -475,4 +475,5 @@ O comando apt-get install também pode atualizar um pacote, se esse pacote estiv
 A atualização de todos os pacotes do sistema deve ser feita em duas etapas. Primeiro, atualize o cache de todos os pacotes disponíveis com o `` apt-get update ``. Em segundo lugar, execute o comando `` apt-get upgrade `` e todos os pacotes e dependências serão atualizados.
 
     apt-get update
+    
     apt-get upgrade
