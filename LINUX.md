@@ -40,6 +40,8 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` cp `` - usado para copiar arquivos
 * `` dd `` - é um utilitário para copiar arquivos ou partições inteiras no nível de bits
 * `` mv `` - usado para mover um arquivo de um local no sistema de arquivos para outro
+* `` rm `` - usado para excluir arquivos e diretórios
+* `` grep `` - é um filtro de texto que irá procurar linhas de entrada e retorno que contenham uma correspondência para um determinado padrão
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -283,3 +285,18 @@ Mover um arquivo dentro do mesmo diretório é uma maneira eficaz de renomeá-lo
     mv animals.txt zoo.txt
 
 As permissões podem ter um impacto nos comandos de gerenciamento de arquivos, como o comando `` mv ``. Mover um arquivo requer permissões de gravação e execução tanto nos diretórios de origem quanto nos de destino.
+
+## Removendo arquivos
+O comando `` rm `` é usado para excluir arquivos e diretórios. É importante ter em mente que arquivos e diretórios excluídos não entram em uma “lixeira” como acontece com sistemas operacionais voltados para a área de trabalho. Quando um arquivo é excluído com o comando `` rm ``, ele quase sempre desaparece permanentemente.
+
+    rm [opções] arquivo
+
+Sem opções, o comando rm é normalmente usado para remover arquivos regulares. O comando `` rm `` ignorará os diretórios que é solicitado a remover; para excluir um diretório, use uma opção recursiva, seja as opções `` -r `` ou `` -R `` . Basta ter cuidado, uma vez que estas opções são “recursivas”, isto irá eliminar todos os arquivos e todos os subdiretórios.
+
+As permissões podem ter um impacto nos comandos de gerenciamento de arquivos, como o comando `` rm ``. Para excluir um arquivo dentro de um diretório, um usuário deve ter permissão de gravação e execução em um diretório. Normalmente, os usuários regulares só têm esse tipo de permissão em seu diretório (home) pessoal e seus subdiretórios.
+
+## Filtragem de Entrada
+O comando `` grep `` é um filtro de texto que irá procurar linhas de entrada e retorno que contenham uma correspondência para um determinado padrão.
+
+    grep [opções] padrão [arquivo]
+
