@@ -51,6 +51,9 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` apt-get `` - um programa front-end para a ferramenta `` dpkg ``, torna o gerenciamento de pacotes ainda mais fácil.
     * `` apt-get update `` - atualiza a lista de pacotes disponíveis
     * `` apt-cache search `` - procura palavras-chave dentro dos pacotes
+    * `` apt-get install `` - usado para instalar o pacote desejado
+    * `` apt-get update `` - atualiza o cache de todos os pacotes disponíveis
+    * `` apt-get upgrade `` - atualiza todos os pacotes e dependências 
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -456,4 +459,20 @@ Os arquivos de pacote são normalmente instalados baixando-os diretamente de rep
 
     sudo apt-get update
 
-Para procurar palavras-chave dentro desses pacotes, você pode usar o comando apt-cache search.
+Para procurar palavras-chave dentro desses pacotes, você pode usar o comando `` apt-cache search ``.
+
+    apt-cache search [palavra chave]
+
+A palavra-chave usada deve corresponder a parte do nome ou descrição do pacote que deve ser localizado. Várias palavras-chave podem ser usadas para esclarecer ainda mais a pesquisa; por exemplo, o termo de pesquisa `` servidor web `` forneceria melhores resultados de web ou servidor.
+
+Depois de encontrar o pacote que deseja instalar, você pode instalá-lo com o comando `` apt-get install ``
+
+    sudo apt-get install [pacote]
+
+### Atualizando pacotes
+O comando apt-get install também pode atualizar um pacote, se esse pacote estiver instalado e uma versão mais recente estiver disponível. Se o pacote ainda não estiver no sistema, ele será instalado; se estiver no sistema, ele será atualizado.
+
+A atualização de todos os pacotes do sistema deve ser feita em duas etapas. Primeiro, atualize o cache de todos os pacotes disponíveis com o `` apt-get update ``. Em segundo lugar, execute o comando `` apt-get upgrade `` e todos os pacotes e dependências serão atualizados.
+
+    apt-get update
+    apt-get upgrade
