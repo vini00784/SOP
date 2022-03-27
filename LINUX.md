@@ -38,6 +38,8 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` head `` - usado para filtrar a visualização de um arquivo para a parte superior dele
 * `` tail `` - usado para filtrar a visualização de um arquivo para a parte inferior dele
 * `` cp `` - usado para copiar arquivos
+* `` dd `` - é um utilitário para copiar arquivos ou partições inteiras no nível de bits
+* `` mv `` - usado para mover um arquivo de um local no sistema de arquivos para outro
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -260,3 +262,24 @@ Este comando tem vários recursos úteis, inclusive:
 * Pode ser usado para copiar dados brutos para dispositivos removíveis, como unidades USB e CDROMs.
 * Pode fazer backup e restaurar o MBR (Master Boot Record).
 * Pode ser usado para criar um arquivo de tamanho específico preenchido com zeros binários, que pode ser usado como um arquivo de swap (memória virtual).
+
+O comando dd usa argumentos especiais para especificar como ele funcionará. A seguir ilustra alguns dos argumentos mais comumente usados:
+
+![argumentos para o comando dd](./linux-imgs/19.PNG)
+
+## Mover arquivos
+O comando `` mv `` é usado para mover um arquivo de um local no sistema de arquivos para outro.
+
+    mv fonte destino
+
+O comando `` mv `` requer pelo menos dois argumentos. O primeiro argumento é a fonte, um caminho para o arquivo a ser movido. O segundo argumento é o destino, um caminho para onde o arquivo será movido. Os arquivos a serem movidos às vezes são chamados de origem, e o local onde os arquivos devem ser colocados é chamado de destino.
+
+Se um arquivo for movido de um diretório para outro sem especificar um novo nome para o arquivo, ele manterá seu nome original.
+
+O comando `` mv `` é capaz de mover vários arquivos, desde que o argumento final fornecido ao comando seja o destino.
+
+Mover um arquivo dentro do mesmo diretório é uma maneira eficaz de renomeá-lo. Por exemplo, no exemplo a seguir, o arquivo animals.txt recebe um novo nome de zoo.txt:
+
+    mv animals.txt zoo.txt
+
+As permissões podem ter um impacto nos comandos de gerenciamento de arquivos, como o comando `` mv ``. Mover um arquivo requer permissões de gravação e execução tanto nos diretórios de origem quanto nos de destino.
