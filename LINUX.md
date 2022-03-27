@@ -318,3 +318,17 @@ A tabela a seguir resume as expressões regulares estendidas, que devem ser usad
 ![Tabela de expressões regulares estendidas](./linux-imgs/22.PNG)
 
 ### Padrões básicos
+Expressões regulares são padrões que apenas certos comandos são capazes de interpretar. Expressões regulares podem ser expandidas para corresponder a determinadas sequências de caracteres no texto. Os exemplos exibidos nesta página farão uso de expressões regulares para demonstrar seu poder quando usado com o comando `` grep ``. Além disso, esses exemplos fornecem uma demonstração muito visual de como as expressões regulares funcionam, o texto correspondente será exibido em uma cor vermelha.
+
+#### Caracteres Âncora
+Caracteres âncora são uma das formas como expressões regulares podem ser usadas para restringir os resultados da pesquisa. Por exemplo, a root padrão aparece muitas vezes no arquivo /etc/passwd:
+
+![exemplo comando grep](./linux-imgs/23.PNG)
+
+Para evitar que o shell os intérprete erroneamente como caracteres especiais, esses padrões devem ser protegidos por aspas fortes, o que significa simplesmente colocá-los entre aspas simples.
+
+O <strong>primeiro caractere</strong> âncora `` ^ `` é usado para garantir que um padrão apareça no início da linha. Por exemplo, para encontrar todas as linhas em /etc/passwd que começam com root use o padrão ^root. Observe que ^ deve ser o primeiro caractere no padrão para ser efetivo.
+
+![exemplo comando grep](./linux-imgs/24.PNG)
+
+O segundo caractere âncora $ pode ser usado para garantir que um padrão apareça no final da linha, reduzindo assim efetivamente os resultados da pesquisa. Para encontrar as linhas que terminam com um r no arquivo alpha-first.txt, use o padrão r$:
