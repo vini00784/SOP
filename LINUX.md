@@ -42,6 +42,7 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` mv `` - usado para mover um arquivo de um local no sistema de arquivos para outro
 * `` rm `` - usado para excluir arquivos e diretórios
 * `` grep `` - é um filtro de texto que irá procurar linhas de entrada e retorno que contenham uma correspondência para um determinado padrão
+* `` shutdown `` - faz com que o sistema seja desligado de forma segura
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -380,3 +381,12 @@ Se um nome de arquivo não for fornecido, o comando `` grep `` será lido a part
     grep 'red'
 
 Ao dar enter no comando acima, o prompt exigirá uma entrada, que será digitada ali na hora, como o argumento é `` 'red' ``, todo red que for digitado será filtrado.
+
+## Desligando
+O comando `` shutdown `` faz com que o sistema seja desligado de forma segura. Todos os usuários conectados são notificados de que o sistema está sendo desativado e, nos últimos cinco minutos que antecederam o desligamento, novos logins são evitados.
+
+    shutdown [opções] tempo [mensagem]
+
+Este comando requer acesso administrativo, então não se esqueça de usar o comando `` su ``
+
+Ao contrário de outros comandos usados para desligar o sistema, o comando `` shutdown `` requer um argumento de tempo especificando quando o desligamento deve começar. Os formatos deste argumento de tempo podem ser a palavra now (agora), uma hora do dia no formato hh:mm ou o número de minutos para atrasar no formato +minutos.
