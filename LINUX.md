@@ -331,4 +331,19 @@ O <strong>primeiro caractere</strong> âncora `` ^ `` é usado para garantir que
 
 ![exemplo comando grep](./linux-imgs/24.PNG)
 
-O segundo caractere âncora $ pode ser usado para garantir que um padrão apareça no final da linha, reduzindo assim efetivamente os resultados da pesquisa. Para encontrar as linhas que terminam com um r no arquivo alpha-first.txt, use o padrão r$:
+O <strong>segundo caractere</strong> âncora `` $ `` pode ser usado para garantir que um padrão apareça no final da linha, reduzindo assim efetivamente os resultados da pesquisa. Para encontrar as linhas que terminam com um r no arquivo alpha-first.txt, use o padrão r$:
+
+    grep 'r$' alpha-first.txt
+
+Novamente, a posição deste caractere é importante, o $ deve ser o último caractere no padrão para ser eficaz como uma âncora.
+
+#### Combine um único caractere com .
+Uma das expressões mais úteis é o caractere de ponto `` .. `` Ele irá corresponder a qualquer caractere, exceto para o novo caractere de linha. O padrão r..f encontraria qualquer linha que contenhaa letra r seguida por exatamente dois caracteres (que pode ser qualquer caractere exceto uma nova linha) e, em seguida, a letra f
+
+    grep 'r..f' red.txt
+
+Este caractere pode ser usado qualquer número de vezes. Para localizar todas as palavras que tenham pelo menos quatro caracteres, o seguinte padrão pode ser usado:
+
+    grep '....' red.txt
+
+A linha não precisa ser uma correspondência exata, ela simplesmente deve conter o padrão.
