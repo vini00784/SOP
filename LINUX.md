@@ -582,3 +582,25 @@ Yank coloca conteúdo no buffer sem excluí-lo. A tabela a seguir fornece alguns
 ![comandos arrancar](./linux-imgs/37.PNG)
 
 ### Colocar
+O colocar, posiciona o texto guardado no buffer antes ou depois da posição do cursor. Observe que estas são as duas únicas opções, o colocar não usa os movimentos como os comandos de ação anteriores.
+
+![comandos colocar](./linux-imgs/38.PNG)
+
+### Pesquisando em vi
+Outra função padrão que os processadores de texto oferecem é o encontrar. Muitas vezes, as pessoas usam `` CTRL-F `` ou observam o menu de edição. O programa vi usa a pesquisa. O pesquisar é mais eficiente do que o encontrar porque suporta padrões de texto literal e expressões regulares.
+
+Para pesquisar a partir da posição atual do cursor, use `` / `` para iniciar a pesquisa, digite um termo de pesquisa e pressione a tecla Enter para iniciar a pesquisa. O cursor se moverá para a primeira correspondência que for encontrada.
+
+### Modo de inserção
+O modo de inserção é usado para adicionar texto ao documento. Há algumas maneiras de entrar no modo de inserção a partir do modo de comando, cada uma diferenciada por onde a inserção de texto começará. A tabela a seguir abrange o mais comum:
+
+![comandos modo de inserção](./linux-imgs/39.PNG)
+
+### Ex Mode
+No modo normal original, o editor `` ex `` só permitia aos usuários ver e modificar uma linha de cada vez. No modo visual, os usuários podiam ver o máximo possível do documento que caberia na tela. Como a maioria dos usuários preferia o modo visual ao modo de edição de linha, o arquivo ex programa foi vinculado a um arquivo `` vi ``, para que os usuários pudessem iniciar ex diretamente no modo visual quando executassem o link vi.
+
+Quando o modo ex do editor vi está sendo usado, é possível visualizar ou alterar configurações, bem como executar comandos relacionados a arquivos, como abrir, guardar ou interromper alterações em um arquivo. Para chegar ao modo ex, digite um caractere `` : `` no modo de comando. A tabela a seguir lista algumas ações comuns executadas no modo ex:
+
+![](./linux-imgs/40.PNG)
+
+Uma análise rápida da tabela acima revela que, se um ponto de exclamação, `` ! ``, é adicionado a um comando, ele então tenta forçar a operação. Por exemplo, imagine que você faz alterações em um arquivo no editor vi e, em seguida, tente sair com `` :q ``, apenas para descobrir que o comando falha. O editor vi não quer sair sem salvar as alterações feitas em um arquivo, mas você pode forçá-lo a sair com o comando ex `` :q! ``.
