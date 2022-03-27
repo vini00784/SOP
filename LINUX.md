@@ -338,7 +338,7 @@ O <strong>segundo caractere</strong> âncora `` $ `` pode ser usado para garanti
 Novamente, a posição deste caractere é importante, o $ deve ser o último caractere no padrão para ser eficaz como uma âncora.
 
 #### Combine um único caractere com .
-Uma das expressões mais úteis é o caractere de ponto `` .. `` Ele irá corresponder a qualquer caractere, exceto para o novo caractere de linha. O padrão r..f encontraria qualquer linha que contenhaa letra r seguida por exatamente dois caracteres (que pode ser qualquer caractere exceto uma nova linha) e, em seguida, a letra f
+Uma das expressões mais úteis é o caractere de ponto `` .. `` Ele irá corresponder a qualquer caractere, exceto para o novo caractere de linha. O padrão r..f encontraria qualquer linha que contenhaa letra r seguida por exatamente dois caracteres (que pode ser qualquer caractere exceto uma nova linha) e, em seguida, a letra f:
 
     grep 'r..f' red.txt
 
@@ -347,3 +347,36 @@ Este caractere pode ser usado qualquer número de vezes. Para localizar todas as
     grep '....' red.txt
 
 A linha não precisa ser uma correspondência exata, ela simplesmente deve conter o padrão.
+
+#### Corresponder um único caractere com []
+Os colchetes `` [] `` correspondem a um único caractere da lista ou intervalo de caracteres possíveis contidos entre parênteses.
+
+Para encontrar todas as linhas em um arquivo que têm um número neles, use o padrão [0123456789] ou [0-9]:
+
+    grep '[0-9]' profile.txt
+
+Por outro lado, para encontrar todas as linhas que contêm caracteres não numéricos, insira um `` ^ `` como o primeiro caractere dentro dos colchetes. Este caractere nega os caracteres listados
+
+    grep '[^0-9]' profile.txt
+
+Não confunda [^0-9] para corresponder às linhas que não contêm números. Na verdade, corresponde a linhas que contêm não-números. Olhe para o arquivo original para ver a diferença. A terceira e a sexta linhas contêm apenas números, elas não contêm os não-números então essas linhas não correspondem.
+
+Quando outros caracteres de expressão regular são colocados dentro de colchetes, eles são tratados como caracteres literais. Por exemplo, o . normalmente corresponde a qualquer caractere, mas colocado dentro dos colchetes, então ele irá apenas corresponder a si mesmo. No próximo exemplo, somente linhas que contêm o . são correspondidos.
+
+    grep '[.]' profile.txt
+
+#### Combine um personagem ou padrões repetidos com *
+O caractere de expressão regular `` * `` é usado para corresponder zero ou mais ocorrências de um caractere ou padrão que o precede. Por exemplo `` e* `` corresponderia a zero ou mais ocorrências da letra e:
+
+![Exemplo com o caractere *](./linux-imgs/25.PNG)
+
+Também é possível combinar zero ou mais ocorrências de uma lista de caracteres utilizando os colchetes. O padrão [oe]* usado no exemplo a seguir corresponderá a zero ou mais ocorrências do caractere o ou do caractere e:
+
+    grep 'r[oe]*d' red.txt
+
+#### Entrada padrão
+Se um nome de arquivo não for fornecido, o comando `` grep `` será lido a partir de entrada padrão, que normalmente vem do teclado com entrada fornecida pelo usuário que executa o comando. Isso fornece uma experiência interativa com `` grep `` onde o usuário digita na entrada e os filtros do grep à medida que vai. Sinta-se livre para experimentá-lo, basta pressionar Ctrl-D quando estiver pronto para retornar ao prompt.
+
+    grep 'red'
+
+Ao dar enter no comando acima, o prompt exigirá uma entrada, que será digitada ali na hora, como o argumento é `` 'red' ``, todo red que for digitado será filtrado.
