@@ -31,10 +31,12 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` pwd `` - imprime o diretório de trabalho, sua localização atual dentro do sistema de arquivos
 * `` cd `` - navega pela estrutura do sistema de arquivos
 * `` su `` - permite que você atue temporariamente como um usuário diferente. Por padrão, se uma conta de usuário não for especificada, o comando su abrirá um novo shell como usuário root, que fornece privilégios administrativos
-* `` sudo `` - o comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos.
-* `` chmod `` - usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou o usuário que possui o arquivo é capaz de alterar as permissões de um arquivo.
-* `` chown `` - usado para alterar a propriedade de arquivos e diretórios.
+* `` sudo `` - o comando sudo permite que um usuário execute um comando como outro usuário sem criar um novo shell. Em vez disso, para executar um comando com privilégios administrativos, use-o como um argumento para o comando `` sudo ``. Como o comando `` su ``, o comando `` sudo `` assume por padrão que a conta de usuário root deve ser usada para executar comandos
+* `` chmod `` - usado para alterar as permissões de um arquivo ou diretório. Somente o usuário root ou o usuário que possui o arquivo é capaz de alterar as permissões de um arquivo
+* `` chown `` - usado para alterar a propriedade de arquivos e diretórios
 * `` cat `` - usado para visualizar rapidamente o conteúdo de pequenos arquivos
+* `` head `` - usado para filtrar a visualização de um arquivo para a parte superior dele
+* `` tail `` - usado para filtrar a visualização de um arquivo para a parte inferior dele
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -206,3 +208,31 @@ OBS.: Não se esquecer de usar o comando `` sudo `` para obter os privilégios d
 
 ## Exibindo arquivos
 Existem alguns comandos Linux disponíveis para visualizar o conteúdo dos arquivos. O comando `` cat ``, que significa 'concatenate', é frequentemente usado para visualizar rapidamente o conteúdo de pequenos arquivos.
+
+O comando `` cat `` exibirá todo o conteúdo do arquivo, por isso é recomendado principalmente para arquivos menores onde a saída é limitada e não requer rolagem. Para visualizar o conteúdo de um arquivo usando o comando cat, basta digitar o comando e usar o nome do arquivo que você deseja visualizar como argumento:
+
+    cat [opções] [arquivo]
+
+Ao visualizar arquivos maiores, o comando cat pode resultar em uma saída muito longa que não pode ser pausada para rolar. Um melhor método de visualização de arquivos de texto longos,é com um `` comando de pager `` que possui uma funcionalidade que pode pausar e rolar pela saída do arquivo. Alguns comandos pager: `` more `` ou `` less ``.
+
+Outra maneira de visualizar o conteúdo dos arquivos é usando os comandos `` head `` e `` tail ``. Esses comandos são usados ​​para exibir um número selecionado de linhas na parte superior ou inferior de um arquivo. Servem como uma espécie de filtro.
+
+    head [opções] [arquivo]
+    tail [opções] [arquivo]
+
+A opção `` -n `` com os comandos `` head `` e `` tail `` pode ser usada para especificar a quantidade de linhas a serem exibidas. Para usar a opção -n, especifique a quantidade de linhas do arquivo que deseja exibir após a opção e use o nome do arquivo como argumento:
+
+    head -n número_de_linhas nome_do_arquivo
+
+## Copiando arquivos
+O comando `` cp `` é usado para copiar arquivos. Ele requer pelo menos dois argumentos: uma origem e um destino.
+
+    cp [opções] fonte destino
+
+ Por exemplo, para copiar o arquivo /etc/passwd para o diretório atual, use o seguinte comando:
+
+ ![comando cp na prática](./linux-imgs/18.PNG)
+
+ O segundo argumento é caratere (.). Lembre-se da seção Alterando Diretórios que é um atalho que representa o diretório atual.
+ 
+ O resultado da execução do comando anterior criaria uma cópia do conteúdo do arquivo /etc/passwd no diretório Documents, uma vez que esse é o nosso diretório atual.
