@@ -48,6 +48,9 @@ A maioria dos comandos segue um padrão simples de sintaxe `` comando [opcoes…
 * `` iwconfig `` - semelhante ao comando `` ifconfig ``, mas é dedicado a interfaces de rede sem fio
 * `` ping `` - usado para verificar a conectividade entre dois computadores
 * `` ps `` - usado para listar processos
+* `` apt-get `` - um programa front-end para a ferramenta `` dpkg ``, torna o gerenciamento de pacotes ainda mais fácil.
+    * `` apt-get update `` - atualiza a lista de pacotes disponíveis
+    * `` apt-cache search `` - procura palavras-chave dentro dos pacotes
 
 ## Argumentos
 Um argumento pode ser usado para especificar algo para o comando agir.
@@ -447,3 +450,10 @@ O gerenciamento de pacotes é um sistema pelo qual o software pode ser instalado
 No nível mais baixo do sistema de gerenciamento de pacotes Debian está o comando `` dpkg ``. Este comando pode ser complicado para usuários iniciantes do Linux, então a Advanced Package Tool, `` apt-get ``, um programa front-end para a ferramenta `` dpkg ``, torna o gerenciamento de pacotes ainda mais fácil.
 
 Muitos dos comandos de gerenciamento de pacotes exigem acesso administrativo, portanto, eles serão prefaciados com o comando `` sudo ``.
+
+### Instalando pacotes
+Os arquivos de pacote são normalmente instalados baixando-os diretamente de repositórios localizados em servidores de Internet. Os repositórios Debian contêm mais de 65.000 pacotes diferentes de software. Antes de instalar um pacote, é uma boa prática usar a atualização da lista de pacotes disponíveis usando o comando `` apt-get update ``.
+
+    sudo apt-get update
+
+Para procurar palavras-chave dentro desses pacotes, você pode usar o comando apt-cache search.
