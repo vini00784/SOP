@@ -305,3 +305,16 @@ Por exemplo, o arquivo passwd que copiamos anteriormente para o diretório Docum
 ![comando grep na prática](./linux-imgs/20.PNG)
 
 O comando acima retornou a linha do passwd que contém o sysadmin padrão.
+
+### Expressões Regulares
+As expressões regulares têm duas formas comuns: básica e estendida. A maioria dos comandos que usam expressões regulares pode interpretar expressões regulares básicas. No entanto, expressões regulares estendidas não estão disponíveis para todos os comandos e uma opção de comando é normalmente necessária para que eles funcionem corretamente.
+
+A tabela a seguir resume os caracteres básicos de expressão regular:
+
+![Tabela com caracteres básicos de expressão regular](./linux-imgs/21.PNG)
+
+A tabela a seguir resume as expressões regulares estendidas, que devem ser usadas com o comando `` egrep `` ou a opção `` -E `` com o comando `` grep ``:
+
+![Tabela de expressões regulares estendidas](./linux-imgs/22.PNG)
+
+### Padrões básicos
