@@ -389,4 +389,4 @@ O comando `` shutdown `` faz com que o sistema seja desligado de forma segura. T
 
 Este comando requer acesso administrativo, então não se esqueça de usar o comando `` su ``
 
-Ao contrário de outros comandos usados para desligar o sistema, o comando `` shutdown `` requer um argumento de tempo especificando quando o desligamento deve começar. Os formatos deste argumento de tempo podem ser a palavra now (agora), uma hora do dia no formato hh:mm ou o número de minutos para atrasar no formato +minutos.
+Ao contrário de outros comandos usados para desligar o sistema, o comando `` shutdown `` requer um argumento de tempo especificando quando o desligamento deve começar. Os formatos deste argumento de tempo podem ser a palavra `` now `` (agora), uma hora do dia no formato `` hh:mm `` ou o número de minutos para atrasar no formato `` +minutos ``.
